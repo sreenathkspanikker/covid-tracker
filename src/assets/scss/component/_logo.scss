@@ -1,0 +1,26 @@
+.app-logo{
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include flex(center, normal);
+    @include font-family($font-main, 1em, white, 600, 1.2em);
+    @include media-breakpoint-down(md) {
+        font-size: 0.8em;
+    }
+    img{
+        max-width: 55px;
+        @include media-breakpoint-down(md) {
+            max-width: 50px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: 35px;
+        }
+    }
+    span{
+        margin-left: 0.5rem;
+        display: inline-flex;
+    }
+    &:hover{
+        color: $color_six;
+    }
+}

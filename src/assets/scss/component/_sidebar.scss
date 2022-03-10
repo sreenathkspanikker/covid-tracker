@@ -1,0 +1,101 @@
+.app-sidebar{
+    flex: none;
+    width: 250px;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    background-color: $color_two;
+    @include flex(center, space-between);
+    padding: var(--padding) calc(2 * var(--padding));
+    @include media-breakpoint-down(md) {
+        width: 175px;
+        padding: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        padding: 0.5rem 1rem;
+    }
+    .nav{
+        margin-top: calc(3* var(--margin));
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        .nav-link{
+            transition: all ease .4s;
+            margin-bottom: var(--margin);
+            @include flex(center, normal);
+            border-radius: calc(3* var(--border-radius));
+            padding: 0.8rem calc(1.5 * var(--padding));
+            @include font-family($font-main, 1em, $color_five, 500, 1);
+            @include media-breakpoint-down(md) {
+                font-size: 0.8em;
+                padding: 0.5rem;
+            }
+            .icon{
+                margin-right: 0.8rem;
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+            }
+            &:nth-child(1){
+                .icon{
+                    font-size: 1.1em; 
+                }
+            }
+            &:nth-child(2){
+                .icon{
+                    font-size: 1.15em; 
+                }
+            }
+            &:hover{
+                color: white;
+            }
+            &.active{
+                color: white;
+                background-color: $color_seven;
+            }
+        }
+    }
+    .btn-aboutme{
+        @include font-family($font-main, 1em, white, 500, 1);
+        background-color: $color_three;
+        @include flex(center, normal);
+        letter-spacing: 0.04em;
+        border-radius: 6px;
+        overflow: hidden;
+        padding: 0.6rem;
+        width: 100%;
+        box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.53)!important;
+        -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.53)!important;
+        -moz-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.53)!important;
+        @include media-breakpoint-down(md) {
+            font-size: 0.8em;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 35px;
+            padding: 0.1rem;
+            text-indent: 9999px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+            border-radius: 6px;
+            @include media-breakpoint-down(md) {
+                margin-right: 0.5rem;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 30px;
+                height: 30px;
+                margin: 0;
+            }
+        }
+        &:hover{
+            background-color: rgba($color_five, 0.3);
+        }
+    }
+}

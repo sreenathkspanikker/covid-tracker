@@ -1,0 +1,66 @@
+.app-total-count{
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    .card-content{
+        .chart-content{
+            @include flex(center, space-between);
+            h3{
+                margin: 0;
+                margin-right: 1rem;
+                letter-spacing: 0.06em;
+                @include font-family($font-main, 1.75em, $color_five, 600, 1em);
+                span{
+                    display: block;
+                    font-size: 0.4em;
+                }
+            }
+        }
+    }
+}
+
+.app-totals{
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 0;
+    }
+    .card-title{
+        margin-bottom: 1rem;
+    }
+    .app-totals-list{
+        padding: 1rem;
+        background-color: $color_two;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1rem;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            li{
+                @include flex(center, space-between);
+                @include font-family($font-main, 1em, $color_four, 300, 2em);
+                span{
+                    font-weight: 600;
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 0.88em;
+                }
+                @include media-breakpoint-only(md) {
+                    display: block;
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.app-chart-bar-wrap{
+    .chart-wrap{
+        overflow-x: auto;
+        canvas{
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}

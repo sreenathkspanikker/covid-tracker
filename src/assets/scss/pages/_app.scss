@@ -1,0 +1,7 @@
+.App{
+    @include media-breakpoint-up(sm) {
+        height: 100vh;
+        overflow: hidden;
+        @include flex(normal, normal);
+    }
+}
