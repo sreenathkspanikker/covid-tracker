@@ -14,6 +14,9 @@ Developed to track the current covid stuations around the world,
 ### To run the project
 
 `clone repo` <br/>
+
 `npm install | yarn install` <br/>
+
 `npm start | yarn start` <br/>
+
 `open browser and check localhost: 3000` <br/>
